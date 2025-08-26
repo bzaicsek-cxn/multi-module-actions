@@ -31,5 +31,5 @@ jobs:
         with:
           name: gradle dist
           path: |
-            orange/app/build/distributions
+            apple/app/build/distributions
       - run: echo "🍏 This job's status is ${{ job.status }}."
