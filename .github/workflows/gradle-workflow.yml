@@ -21,7 +21,7 @@ jobs:
          distribution: 'temurin'
          java-version: '21'
       - name: Setup gradle
-        uses: gradle/actions/setup-gradle@v3\
+        uses: gradle/actions/setup-gradle@v4
       - run: >
           cd apple
           chmod +x gradlew
