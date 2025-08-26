@@ -25,5 +25,5 @@ jobs:
       - run: |
           cd apple
           chmod +x gradlew
-          .0/gradlew build
+          ./gradlew build
       - run: echo "🍏 This job's status is ${{ job.status }}."
