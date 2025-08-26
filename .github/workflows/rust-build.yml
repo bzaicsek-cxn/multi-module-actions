@@ -1,0 +1,26 @@
+name: Rust build
+run-name: build rust
+on: 
+  push:
+    paths:
+      - orange/**
+  workflow_dispatch:
+
+jobs:
+  go-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Install Rust
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+      - run: |
+          cd orange
+          cargo build --release
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: rust dist
+          path: |
+            orange/target/release/*
+

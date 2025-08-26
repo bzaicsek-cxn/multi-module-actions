@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - apple/**
+  workflow_dispatch:
 
 jobs:
   gradlew-build:
