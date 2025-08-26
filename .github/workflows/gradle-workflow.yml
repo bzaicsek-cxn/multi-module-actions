@@ -22,7 +22,7 @@ jobs:
          java-version: '21'
       - name: Setup gradle
         uses: gradle/actions/setup-gradle@v4
-      - run: >
+      - run: |
           cd apple
           chmod +x gradlew
           .0/gradlew build
