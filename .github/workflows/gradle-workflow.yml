@@ -1,8 +1,9 @@
 name: Apple build
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
-paths:
-  - apple/**
+on: 
+  push:
+    paths:
+      - apple/**
 
 jobs:
   gradlew-build:
