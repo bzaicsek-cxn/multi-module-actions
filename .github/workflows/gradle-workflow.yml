@@ -26,4 +26,10 @@ jobs:
           cd apple
           chmod +x gradlew
           ./gradlew build
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: gradle dist
+          path: |
+            orange/app/build/distributions
       - run: echo "🍏 This job's status is ${{ job.status }}."
